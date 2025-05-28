@@ -1,7 +1,23 @@
 ---
+import About from "../components/about/About.astro";
+import Hero from "../components/hero/Hero.astro";
+import FAQ from "../components/questions/FAQ.astro";
+import Services from "../components/services/Services.astro";
+import Testimonials from "../components/testimonials/Testimonials.astro";
+import WhyUS from "../components/why-us/whyUS.astro";
+import Contact from "../components/contact/Contact.astro";
+
 import Layout from "../layouts/Layout.astro";
+import Footer from "../components/footer/Footer.astro";
 ---
 
 <Layout>
-  <p>oi mundo</p>
+  <Hero />
+  <About />
+  <WhyUS />
+  <Services />
+  <Testimonials />
+  <FAQ />
+  <Contact />
+  <Footer />
 </Layout>
