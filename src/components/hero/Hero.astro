@@ -1,11 +1,18 @@
 ---
-
+import { Image } from "astro:assets";
+import logo from "../../assets/hero-assets/VJM (1)-Photoroom.png";
 ---
 
-<section class="min-h-svh bg-gradient-to-b from-emerald-100 to-emerald-700">
-  <nav>
-    <div>logo</div>
-    <ul>
+<section
+  class="min-h-svh flex flex-col gap-8 bg-[url(src/assets/hero-assets/fundo-hero.jpg)] bg-cover bg-center relative"
+>
+  <div class="absolute w-full h-full bg-black/50"></div>
+
+  <nav class="flex flex-col justify-between items-center relative">
+    <div>
+      <Image src={logo} alt="logo" width={500} height={500} class="w-50 h-50" />
+    </div>
+    <ul class="hidden sm:flex">
       <li><a href="">Início</a></li>
       <li><a href="">About</a></li>
       <li><a href="">Por que nós?</a></li>
@@ -14,14 +21,92 @@
       <li><a href="">FAQ</a></li>
       <li><a href="">Contato</a></li>
     </ul>
+    <div class="relative sm:hidden">
+      <details>
+        <summary class="cursor-pointer [custom-summary] text-dourado-ocre">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="hover:scale-110 transition-all duration-300 ease-in-out"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </summary>
+        <ul
+          class="absolute text-lg text-center text-branco-gelo font-semibold font-spectral mt-6 p-4 -translate-x-15 flex flex-col gap-4 bg-dourado-ocre z-10"
+        >
+          <li class="border-b-1 border-white"><a href="">Início</a></li>
+          <li class="border-b-1 border-white"><a href="">Sobre</a></li>
+          <li class="border-b-1 border-white"><a href="">Por que nós?</a></li>
+          <li class="border-b-1 border-white"><a href="">Services</a></li>
+          <li class="border-b-1 border-white"><a href="">Depoimentos</a></li>
+          <li class="border-b-1 border-white"><a href="">FAQ</a></li>
+          <li class="border-b-1 border-white"><a href="">Contato</a></li>
+        </ul>
+      </details>
+    </div>
   </nav>
-  <h1>Dra. Vera Júlia Matos - Advogada Trabalhista</h1>
-  <h2>Defendendo Seus Direitos no Trabalho</h2>
-  <p>
-    Sofreu uma injustiça no ambiente de trabalho? Nossa especialidade é garantir
-    que seus direitos sejam respeitados e que você receba a compensação que
-    merece.
-  </p>
-  <a href="">Agende uma Análise Gratuita do seu Caso</a>
-  <a href="">Fale Conosco pelo WhatsApp</a>
+  <div
+    class="relative text-branco-gelo text-center font-spectral my-auto flex flex-col gap-6 p-4"
+  >
+    <h1 class="text-5xl font-semibold">Dra. Vera Júlia Matos</h1>
+    <h2 class="text-2xl font-medium">Advogada Trabalhista</h2>
+    <h2 class="text-lg font-semibold">Defendendo Seus Direitos no Trabalho</h2>
+    <p class="hidden">
+      Sofreu uma injustiça no ambiente de trabalho? Nossa especialidade é
+      garantir que seus direitos sejam respeitados e que você receba a
+      compensação que merece.
+    </p>
+    <a
+      href=""
+      class="botao-brilhante block mt-12 p-2 bg-dourado-ocre font-bold text-xl w-full max-w-60 mx-auto"
+      >Agende uma Análise <br />Gratuita do seu Caso</a
+    >
+  </div>
+  <a href="" class="hidden relative">Fale Conosco pelo WhatsApp</a>
 </section>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .botao-brilhante {
+    background: linear-gradient(
+      110deg,
+      #bfa15c 0%,
+      #d7bb7a 40%,
+      #f5e9d0 50%,
+      #d7bb7a 60%,
+      #bfa15c 100%
+    );
+    background-size: 200% auto;
+    color: white;
+    border-radius: 0.5rem;
+    animation: shine 10s linear infinite;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+</style>
