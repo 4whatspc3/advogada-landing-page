@@ -1,35 +1,90 @@
 ---
+import { Image } from "astro:assets";
 
+import especSVG from "../../assets/why-us-assets/script-1601-svgrepo-com.svg";
+import peopleSVG from "../../assets/why-us-assets/people-hugging-svgrepo-com.svg";
+import lupaSVG from "../../assets/why-us-assets/magnifying-glass-tilted-right-svgrepo-com.svg";
+import numbersSVG from "../../assets/why-us-assets/numbers-fill-svgrepo-com.svg";
 ---
 
-<section class="min-h-svh bg-gradient-to-b from-orange-100 to-orange-700">
-  <h2>Por Que Confiar em Nossa Advocacia?</h2>
-  <article>
-    <h3>Especialização Comprovada:</h3>
-    <p>
-      Foco 100% em Direito do Trabalho. Não dividimos nossa atenção, o que
-      garante profundo conhecimento da sua causa.
-    </p>
-  </article>
-  <article>
-    <h3>Atendimento Humanizado:</h3>
-    <p>
-      Entendemos o seu lado. Aqui, você não é apenas um número de processo. Você
-      será ouvido(a) e acolhido(a) em todas as etapas.
-    </p>
-  </article>
-  <article>
-    <h3>Transparência Total:</h3>
-    <p>
-      Explicamos cada passo do processo em linguagem clara, sem "juridiquês".
-      Você sempre saberá o que está acontecendo com o seu caso.
-    </p>
-  </article>
-  <article>
-    <h3>Resultados Concretos:</h3>
-    <p>
-      Possuímos um histórico de sucesso em negociações e processos judiciais,
-      buscando sempre a melhor solução para nossos clientes.
-    </p>
-  </article>
+<section class="min-h-svh bg-azul-marinho-escuro flex flex-col gap-10 p-6">
+  <h2
+    class="font-spectral text-3xl text-center text-dourado-ocre font-semibold"
+  >
+    Por Que Confiar em Nossa Advocacia?
+  </h2>
+  <section class="grid grid-rows-4 grid-cols-1 gap-4">
+    <article class="p-2 pt-4 bg-branco-gelo flex flex-col gap-4">
+      <Image
+        src={especSVG}
+        alt="icone"
+        width={20}
+        height={20}
+        class="mx-auto w-12 h-12"
+      />
+      <h3
+        class="text-xl text-center font-semibold text-dourado-ocre font-spectral"
+      >
+        Especialização Comprovada
+      </h3>
+      <p class="text-center">
+        Foco 100% em Direito do Trabalho. Não dividimos nossa atenção, o que
+        garante profundo conhecimento da sua causa.
+      </p>
+    </article>
+    <article class="p-2 pt-4 bg-branco-gelo flex flex-col gap-4">
+      <Image
+        src={peopleSVG}
+        alt="icone"
+        width={20}
+        height={20}
+        class="mx-auto w-12 h-12"
+      />
+      <h3
+        class="text-xl text-center font-semibold text-dourado-ocre font-spectral"
+      >
+        Atendimento Humanizado
+      </h3>
+      <p class="text-center">
+        Entendemos o seu lado. Aqui, você não é apenas um número de processo.
+        Você será ouvido(a) e acolhido(a) em todas as etapas.
+      </p>
+    </article>
+    <article class="p-2 pt-4 bg-branco-gelo flex flex-col gap-4">
+      <Image
+        src={lupaSVG}
+        alt="icone"
+        width={20}
+        height={20}
+        class="mx-auto w-12 h-12"
+      />
+      <h3
+        class="text-xl text-center font-semibold text-dourado-ocre font-spectral"
+      >
+        Transparência Total
+      </h3>
+      <p class="text-center">
+        Explicamos cada passo do processo em linguagem clara, sem "juridiquês".
+        Você sempre saberá o que está acontecendo com o seu caso.
+      </p>
+    </article>
+    <article class="p-2 pt-4 bg-branco-gelo flex flex-col gap-4">
+      <Image
+        src={numbersSVG}
+        alt="icone"
+        width={20}
+        height={20}
+        class="mx-auto w-12 h-12"
+      />
+      <h3
+        class="text-xl text-center font-semibold text-dourado-ocre font-spectral"
+      >
+        Resultados Concretos
+      </h3>
+      <p class="text-center">
+        Possuímos um histórico de sucesso em negociações e processos judiciais,
+        buscando sempre a melhor solução para nossos clientes.
+      </p>
+    </article>
+  </section>
 </section>
