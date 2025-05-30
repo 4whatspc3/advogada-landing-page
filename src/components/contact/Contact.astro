@@ -10,7 +10,7 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
     alt="background image"
     class="top-0 w-full h-full object-cover object-right absolute"
   />
-  <div class="absolute w-full h-full bg-black/50"></div>
+  <div class="absolute w-full h-full bg-black/65"></div>
   <h2
     class="relative p-6 text-branco-gelo text-3xl text-center text-outline font-bold font-spectral"
   >
@@ -27,7 +27,7 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
   <form
     action="https://formsubmit.co/8cad7644f3d0878fa0988faee39f8848"
     method="POST"
-    class="relative text-white"
+    class="relative m-4 p-3 flex flex-col gap-6 outline-2 outline-dourado-ocre"
     id="submitForm"
     target="formsubmit-iframe"
   >
@@ -45,19 +45,24 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
     <input type="hidden" name="_template" value="table" />
     <input type="text" name="_honey" style="display:none" aria-hidden="true" />
     <input type="hidden" name="_captcha" value="true" />
-    <div class="flex flex-col gap-2">
-      <label for="nome" class="font-semibold">Nome:</label>
+    <div class="flex flex-col gap-2 p-2">
+      <label
+        for="nome"
+        class="text-lg font-serif font-semibold text-branco-gelo">Nome:</label
+      >
       <input
         type="text"
         name="nome"
         id="nome"
         placeholder="Maria Oliveira"
-        class="border-1 w-full"
+        class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
         required
       />
     </div>
-    <div class="flex flex-col gap-2">
-      <label for="telefone" class="font-semibold text-gray-800"
+    <div class="flex flex-col gap-2 p-2">
+      <label
+        for="telefone"
+        class="text-lg font-serif font-semibold text-branco-gelo"
         >Nº de telefone/celular:</label
       >
       <input
@@ -67,30 +72,54 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
         placeholder="(99) 99999-9999"
         required
         title="Digite um número de telefone válido no formato (99) 99999-9999"
-        class="border-1 rounded-lg md:rounded-xl border-blue-300 w-full md:w-3/4 lg:w-1/2 p-1 md:p-2 pl-2 md:pl-3"
+        class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
       />
     </div>
-    <div class="flex flex-col gap-2">
-      <label for="email" class="font-semibold">Email:</label>
+    <div class="flex flex-col gap-2 p-2">
+      <label
+        for="email"
+        class="text-lg font-serif font-semibold text-branco-gelo">Email:</label
+      >
       <input
         type="email"
         name="email"
         id="email"
         placeholder="seuemail@email.com"
         required
-        class="border-1 w-full"
+        class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
       />
     </div>
-    <div class="flex flex-col gap-2">
-      <label for="data" class="font-semibold">Data:</label>
-      <input type="date" id="data" name="data" class="border-1 w-full" />
+    <div class="flex flex-col gap-2 p-2">
+      <label
+        for="data"
+        class="text-lg font-serif font-semibold text-branco-gelo">Data:</label
+      >
+      <input
+        type="date"
+        id="data"
+        name="data"
+        class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
+      />
     </div>
-    <div class="flex flex-col gap-2">
-      <label for="hora" class="font-semibold">Horário:</label>
-      <input type="time" id="hora" name="horario" class="border-1 w-full" />
+    <div class="flex flex-col gap-2 p-2">
+      <label
+        for="hora"
+        class="text-lg font-serif font-semibold text-branco-gelo"
+        >Horário:</label
+      >
+      <input
+        type="time"
+        id="hora"
+        name="horario"
+        class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
+      />
     </div>
-    <div class="flex flex-col gap-2">
-      <label for="descricao" class="font-semibold">Como posso te ajudar?</label>
+    <div class="flex flex-col gap-2 p-2">
+      <label
+        for="descricao"
+        class="text-lg font-serif font-semibold text-branco-gelo"
+        >Como posso te ajudar?</label
+      >
 
       <textarea
         id="descricao"
@@ -98,7 +127,8 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
         rows="5"
         cols="33"
         placeholder="Gostaria de fazer uma avaliação geral..."
-        class="border-1 w-full"></textarea>
+        class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
+      ></textarea>
     </div>
     <input type="text" name="_honey" aria-hidden="true" style="display:none" />
     <iframe
@@ -107,7 +137,7 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
       style="display: none; border: none; width: 100%; height: 400px;"></iframe>
     <button
       type="submit"
-      class="bg-blue-700 p-2 w-full md:w-1/2 rounded-2xl lg:rounded-3xl text-white font-medium shadow-lg shadow-blue-500/50 hover:scale-105 transition-transform"
+      class="bg-dourado-ocre outline-1 bg-branco-gelo p-2 w-full hover:scale-105 font-spectral font-bold text-2xl text-branco-gelo"
       >Enviar</button
     >
   </form>
