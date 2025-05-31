@@ -7,14 +7,21 @@ import lupaSVG from "../../assets/why-us-assets/magnifying-glass-tilted-right-sv
 import numbersSVG from "../../assets/why-us-assets/numbers-fill-svgrepo-com.svg";
 ---
 
-<section class="min-h-svh bg-azul-marinho-escuro flex flex-col gap-10 p-6">
+<section
+  class="min-h-svh bg-azul-marinho-escuro flex flex-col gap-10 p-6 lg:bg-[url(src/assets/why-us-assets/bgwhyus.png)] lg:bg-cover lg:bg-bottom"
+>
   <h2
     class="font-spectral text-3xl text-center text-dourado-ocre font-semibold"
   >
     Por Que Confiar em Nossa Advocacia?
   </h2>
-  <section class="grid grid-rows-4 grid-cols-1 gap-4">
-    <article class="p-4 bg-branco-gelo flex flex-col gap-4">
+  <section
+    class="grid grid-rows-4 grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2 md:gap-8 md:m-auto lg:gap-10"
+  >
+    <article
+      class="p-4 bg-branco-gelo flex flex-col gap-4 max-w-100 mx-auto
+             lg:max-w-120 lg:lg:h-70 lg:gap-8 hover:scale-110 duration-500 ease-in-out"
+    >
       <Image
         src={especSVG}
         alt="icone"
@@ -32,7 +39,10 @@ import numbersSVG from "../../assets/why-us-assets/numbers-fill-svgrepo-com.svg"
         garante profundo conhecimento da sua causa.
       </p>
     </article>
-    <article class="p-4 bg-branco-gelo flex flex-col gap-4">
+    <article
+      class="p-4 bg-branco-gelo flex flex-col gap-4 max-w-100 mx-auto
+             lg:max-w-120 lg:lg:h-70 lg:gap-8 hover:scale-110 duration-500 ease-in-out"
+    >
       <Image
         src={peopleSVG}
         alt="icone"
@@ -50,7 +60,10 @@ import numbersSVG from "../../assets/why-us-assets/numbers-fill-svgrepo-com.svg"
         Você será ouvido(a) e acolhido(a) em todas as etapas.
       </p>
     </article>
-    <article class="p-4 bg-branco-gelo flex flex-col gap-4">
+    <article
+      class="p-4 bg-branco-gelo flex flex-col gap-4 max-w-100 mx-auto
+             lg:max-w-120 lg:lg:h-70 lg:gap-8 hover:scale-110 duration-500 ease-in-out"
+    >
       <Image
         src={lupaSVG}
         alt="icone"
@@ -68,7 +81,10 @@ import numbersSVG from "../../assets/why-us-assets/numbers-fill-svgrepo-com.svg"
         Você sempre saberá o que está acontecendo com o seu caso.
       </p>
     </article>
-    <article class="p-4 bg-branco-gelo flex flex-col gap-4">
+    <article
+      class="p-4 bg-branco-gelo flex flex-col gap-4 max-w-100 mx-auto
+             lg:max-w-120 lg:h-70 lg:gap-8 hover:scale-110 duration-500 ease-in-out"
+    >
       <Image
         src={numbersSVG}
         alt="icone"
