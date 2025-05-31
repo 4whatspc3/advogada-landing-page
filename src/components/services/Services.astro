@@ -11,144 +11,468 @@ import vinculo from "../../assets/services-assets/vinculo.jpg";
 import treze from "../../assets/services-assets/13.jpg";
 ---
 
-<section class="min-h-svh bg-branco-gelo p-6 flex flex-col gap-10">
+<style>
+  @media (min-width: 1024px) {
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-300%);
+      }
+    }
+    .carousel-track {
+      animation: scroll 60s linear infinite;
+      /* opcional: assegurar que esteja rodando por padrão */
+      animation-play-state: running;
+    }
+    /* para pausar quando o mouse estiver sobre o track */
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+  }
+</style>
+
+<section
+  class="min-h-svh bg-branco-gelo p-6 flex flex-col gap-10 sm:gap-12 lg:gap-16 lg:bg-[url(src/assets/services-assets/bgservices.png)] lg:bg-cover lg:bg-center"
+>
   <h2
     class="font-spectral text-3xl text-center text-azul-marinho-escuro font-semibold"
   >
     Como Podemos Ajudar
   </h2>
-  <h3 class="font-spectral text-xl text-center text-cinza-escuro font-medium">
+  <h3
+    class="w-full max-w-130 mx-auto font-spectral text-xl text-center text-cinza-escuro font-medium"
+  >
     Oferecemos assessoria jurídica completa para defender os direitos dos
     trabalhadores em diversas situações, como:
   </h3>
-  <section class="flex flex-col gap-8">
-    <article
-      class="min-h-[200px] relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
-    >
-      <Image
-        src={indireta}
-        alt="recisão indireta"
-        class="absolute object-cover h-full w-full -top-10"
-        format="avif"
-      />
-      <h3
-        class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif
-               text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+
+  <div class="relative mt-20">
+    <!-- Mobile/Tablet: empilhado -->
+    <div class="flex flex-col gap-8 sm:gap-12 lg:hidden">
+      <!-- Artigo 1 -->
+      <article
+        class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
-        Rescisão Indireta
-      </h3>
-    </article>
-    <article
-      class="min-h-[200px] relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
-    >
-      <Image
-        src={justacausa}
-        alt="recisão indireta"
-        class="absolute object-cover h-full w-full"
-        format="avif"
-      />
-      <h3
-        class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif
-               text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        <Image
+          src={indireta}
+          alt="recisão indireta"
+          class="absolute object-cover h-full w-full -top-10"
+          format="avif"
+        />
+        <h3
+          class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                 text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        >
+          Rescisão Indireta
+        </h3>
+      </article>
+
+      <!-- Artigo 2 -->
+      <article
+        class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
-        Reversão de Justa Causa Injusta
-      </h3>
-    </article>
-    <article
-      class="min-h-[200px] relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
-    >
-      <Image
-        src={horasextras}
-        alt="recisão indireta"
-        class="absolute object-cover h-full w-full -top-10"
-        format="avif"
-      />
-      <h3
-        class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif
-               text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        <Image
+          src={justacausa}
+          alt="recisão indireta"
+          class="absolute object-cover h-full w-full"
+          format="avif"
+        />
+        <h3
+          class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                 text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        >
+          Reversão de Justa Causa Injusta
+        </h3>
+      </article>
+
+      <!-- Artigo 3 -->
+      <article
+        class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
-        Horas Extras e Adicional Noturno não Pagos
-      </h3>
-    </article>
-    <article
-      class="min-h-[200px] relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
-    >
-      <Image
-        src={assedio}
-        alt="recisão indireta"
-        class="absolute object-cover h-full w-full -top-10"
-        format="avif"
-      />
-      <h3
-        class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif
-               text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        <Image
+          src={horasextras}
+          alt="recisão indireta"
+          class="absolute object-cover h-full w-full -top-10"
+          format="avif"
+        />
+        <h3
+          class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                 text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        >
+          Horas Extras e Adicional Noturno não Pagos
+        </h3>
+      </article>
+
+      <!-- Artigo 4 -->
+      <article
+        class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
-        Assédio Moral e Sexual no Ambiente de Trabalho
-      </h3>
-    </article>
-    <article
-      class="min-h-[200px] relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
-    >
-      <Image
-        src={acidente}
-        alt="recisão indireta"
-        class="absolute object-cover h-full w-full -top-10"
-        format="avif"
-      />
-      <h3
-        class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif
-               text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        <Image
+          src={assedio}
+          alt="recisão indireta"
+          class="absolute object-cover h-full w-full -top-10"
+          format="avif"
+        />
+        <h3
+          class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                 text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        >
+          Assédio Moral e Sexual no Ambiente de Trabalho
+        </h3>
+      </article>
+
+      <!-- Artigo 5 -->
+      <article
+        class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
-        Acidentes de Trabalho <br />e Doenças Ocupacionais
-      </h3>
-    </article>
-    <article
-      class="min-h-[200px] relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
-    >
-      <Image
-        src={acumulo}
-        alt="recisão indireta"
-        class="absolute object-cover h-full w-full -top-10"
-        format="avif"
-      />
-      <h3
-        class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif
-               text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        <Image
+          src={acidente}
+          alt="recisão indireta"
+          class="absolute object-cover h-full w-full -top-10"
+          format="avif"
+        />
+        <h3
+          class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                 text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        >
+          Acidentes de Trabalho <br />e Doenças Ocupacionais
+        </h3>
+      </article>
+
+      <!-- Artigo 6 -->
+      <article
+        class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
-        Desvio e Acúmulo de Função
-      </h3>
-    </article>
-    <article
-      class="min-h-[200px] relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
-    >
-      <Image
-        src={vinculo}
-        alt="recisão indireta"
-        class="absolute object-cover h-full w-full -top-10"
-        format="avif"
-      />
-      <h3
-        class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif
-               text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        <Image
+          src={acumulo}
+          alt="recisão indireta"
+          class="absolute object-cover h-full w-full -top-10"
+          format="avif"
+        />
+        <h3
+          class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                 text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        >
+          Desvio e Acúmulo de Função
+        </h3>
+      </article>
+
+      <!-- Artigo 7 -->
+      <article
+        class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
-        Reconhecimento de Vínculo Empregatício
-      </h3>
-    </article>
-    <article
-      class="min-h-[200px] relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
-    >
-      <Image
-        src={treze}
-        alt="recisão indireta"
-        class="absolute object-cover h-full w-full -top-10"
-        format="avif"
-      />
-      <h3
-        class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif
-               text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        <Image
+          src={vinculo}
+          alt="recisão indireta"
+          class="absolute object-cover h-full w-full -top-10"
+          format="avif"
+        />
+        <h3
+          class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                 text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        >
+          Reconhecimento de Vínculo Empregatício
+        </h3>
+      </article>
+
+      <!-- Artigo 8 -->
+      <article
+        class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
-        Irregularidades no pagamento de Férias, 13º Salário e FGTS
-      </h3>
-    </article>
-  </section>
+        <Image
+          src={treze}
+          alt="recisão indireta"
+          class="absolute object-cover h-full w-full -top-10"
+          format="avif"
+        />
+        <h3
+          class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                 text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+        >
+          Irregularidades no pagamento de Férias, 13º Salário e FGTS
+        </h3>
+      </article>
+    </div>
+
+    <!-- Desktop (lg): carrossel automático -->
+    <div class="hidden lg:block overflow-hidden py-6 lg:py-8">
+      <div class="carousel-track flex lg:gap-x-6">
+        <!-- Primeira sequência de 8 artigos -->
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={indireta}
+            alt="recisão indireta"
+            class="absolute object-cover h-full w-full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Rescisão Indireta
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={justacausa}
+            alt="recisão indireta"
+            class="absolute object-cover h-full w-full"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Reversão de Justa Causa Injusta
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={horasextras}
+            alt="recisão indireta"
+            class="absolute object-cover h-full w-full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Horas Extras e Adicional Noturno não Pagos
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={assedio}
+            alt="recisão indireta"
+            class="absolute object-cover h-full w-full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Assédio Moral e Sexual no Ambiente de Trabalho
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={acidente}
+            alt="recisão indireta"
+            class="absolute object-cover h-full w-full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Acidentes de Trabalho <br />e Doenças Ocupacionais
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={acumulo}
+            alt="recisão indireta"
+            class="absolute object-cover h-full w-full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Desvio e Acúmulo de Função
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={vinculo}
+            alt="recisão indireta"
+            class="absolute object-cover h-full w-full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Reconhecimento de Vínculo Empregatício
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={treze}
+            alt="recisão indireta"
+            class="absolute object-cover h-full w-full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w-full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Irregularidades no pagamento de Férias, 13º Salário e FGTS
+          </h3>
+        </article>
+
+        <!-- Segunda sequência de 8 artigos para loop contínuo -->
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={indireta}
+            alt="recisão indireta"
+            class="absolute object-cover h-full w-full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w/full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Rescisão Indireta
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={justacausa}
+            alt="recisão indireta"
+            class="absolute object-cover h/full w-full"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w/full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Reversão de Justa Causa Injusta
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={horasextras}
+            alt="recisão indireta"
+            class="absolute object-cover h/full w-full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w/full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Horas Extras e Adicional Noturno não Pagos
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={assedio}
+            alt="recisão indireta"
+            class="absolute object-cover h/full w/full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w/full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Assédio Moral e Sexual no Ambiente de Trabalho
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={acidente}
+            alt="recisão indireta"
+            class="absolute object-cover h/full w/full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w/full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Acidentes de Trabalho <br />e Doenças Ocupacionais
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={acumulo}
+            alt="recisão indireta"
+            class="absolute object-cover h/full w/full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w/full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Desvio e Acúmulo de Função
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={vinculo}
+            alt="recisão indireta"
+            class="absolute object-cover h/full w/full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w/full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Reconhecimento de Vínculo Empregatício
+          </h3>
+        </article>
+
+        <article
+          class="min-h-[240px] flex-none w-[calc(100vw/3)] max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
+        >
+          <Image
+            src={treze}
+            alt="recisão indireta"
+            class="absolute object-cover h/full w/full -top-10"
+            format="avif"
+          />
+          <h3
+            class="absolute bottom-0 left-0 w/full p-2 bg-white text-center font-serif leading-relaxed h-20
+                   text-xl font-semibold text-azul-marinho-escuro border-t-2 border-dourado-ocre"
+          >
+            Irregularidades no pagamento de Férias, 13º Salário e FGTS
+          </h3>
+        </article>
+      </div>
+    </div>
+  </div>
 </section>
