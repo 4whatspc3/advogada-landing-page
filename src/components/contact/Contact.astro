@@ -149,7 +149,8 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
         Se prefere contato no WhatsApp 👉
       </p>
       <a
-        href=""
+        id="whatsappLink"
+        href="#"
         aria-label="WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
@@ -232,5 +233,20 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
       // Optional: Reset form
       document.getElementById("submitForm").reset();
     }
+  });
+
+  function redirectToWhatsapp(message) {
+    const url = new URL("/api/whatsapp", window.location.origin);
+    url.searchParams.append("message", message);
+    window.open(url.toString(), "_blank", "noopener,noreferrer");
+  }
+
+  document.getElementById("whatsappLink").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const message =
+      "Olá, tudo bem? Tenho interesse em saber como a Dra. Vera Júlia Matos pode ajudar no meu caso.\n\nFico no aguardo da resposta.";
+
+    redirectToWhatsapp(message);
   });
 </script>
