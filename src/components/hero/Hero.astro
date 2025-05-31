@@ -1,45 +1,86 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../../assets/hero-assets/VJM (1)-Photoroom.png";
+import logo from "../../assets/hero-assets/improvedlogo.png";
+import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
 ---
 
 <section
-  class="min-h-svh flex flex-col gap-8 bg-[url(src/assets/hero-assets/fundo-hero.jpg)] bg-cover bg-center relative"
+  class="min-h-svh flex flex-col gap-8 bg-[url(src/assets/hero-assets/fundo-hero.jpg)] bg-cover bg-center relative lg:gap-20 lg:bg-none"
 >
+  <div id="video-container" class="hidden absolute inset-0 lg:block">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      id="meuVideo"
+      width="640"
+      height="360"
+      poster="public/hero/fallbackv2.jpg"
+      class="w-full h-full object-cover"
+    >
+      <source src="public/hero/compressedBG.webm" type="video/webm" />
+      Seu navegador não suporta a reprodução de vídeo.
+    </video>
+  </div>
+  <Image
+    id="fallbackImg"
+    src={fallbackvideo}
+    alt="Fallback"
+    class="hidden absolute inset-0 w-full h-full object-cover"
+  />
   <div class="absolute w-full h-full bg-black/50"></div>
 
-  <nav class="flex flex-col justify-between items-center relative">
-    <div>
-      <Image src={logo} alt="logo" width={500} height={500} class="w-50 h-50" />
+  <nav
+    class="flex flex-col justify-between items-center relative z-10 lg:flex-row xl:w-[1400px] xl:mx-auto"
+  >
+    <div class="md:mr-auto md:ml-6">
+      <Image
+        src={logo}
+        alt="logo"
+        width={500}
+        height={500}
+        class="-translate-y-6 w-50 h-50 sm:-translate-y-4"
+      />
     </div>
-    <ul class="hidden sm:flex">
-      <li><a href="">Início</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="">Por que nós?</a></li>
-      <li><a href="">Services</a></li>
-      <li><a href="">Depoimentos</a></li>
-      <li><a href="">FAQ</a></li>
+    <ul
+      class="hidden lg:flex gap-4 text-branco-gelo bg-dourado-ocre font-spectral text-lg font-semibold p-4 m-6 mb-auto shadow-md"
+    >
+      <li><a href="" class="border-r-1 border-branco-gelo pr-2">Início</a></li>
+      <li><a href="" class="border-r-1 border-branco-gelo pr-2">About</a></li>
+      <li>
+        <a href="" class="border-r-1 border-branco-gelo pr-2">Diferencial</a>
+      </li>
+      <li>
+        <a href="" class="border-r-1 border-branco-gelo pr-2">Services</a>
+      </li>
+      <li>
+        <a href="" class="border-r-1 border-branco-gelo pr-2">Depoimentos</a>
+      </li>
+      <li><a href="" class="border-r-1 border-branco-gelo pr-2">FAQ</a></li>
       <li><a href="">Contato</a></li>
     </ul>
-    <div class="relative sm:hidden">
+    <div
+      class="relative -translate-y-10 sm:-translate-x-6 sm:ml-auto sm:-translate-y-40 lg:hidden"
+    >
       <details>
         <summary class="cursor-pointer [custom-summary] text-dourado-ocre">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="40"
+            height="40"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
-            class="hover:scale-110 transition-all duration-300 ease-in-out"
+            class="shake-menu sm:w-[60px] h-[60px]"
           >
             <path d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </summary>
         <ul
-          class="absolute text-lg text-center text-branco-gelo font-semibold font-spectral mt-6 p-4 -translate-x-15
-                 flex flex-col gap-4 bg-dourado-ocre z-10 border-4 border-white border-double"
+          class="absolute text-lg text-center text-branco-gelo font-semibold font-spectral mt-4 p-4 -translate-x-15
+                 flex flex-col gap-4 bg-dourado-ocre outline-2 outline-white sm:-translate-x-25"
         >
           <li class="border-b-1 border-white"><a href="">Início</a></li>
           <li class="border-b-1 border-white"><a href="">Sobre</a></li>
@@ -53,23 +94,32 @@ import logo from "../../assets/hero-assets/VJM (1)-Photoroom.png";
     </div>
   </nav>
   <div
-    class="relative text-branco-gelo text-center font-spectral my-auto flex flex-col gap-6 p-4"
+    class="relative text-branco-gelo text-center font-spectral my-auto flex flex-col gap-6 p-4 md:pl-6 lg:gap-8 xl:w-[1400px] xl:mx-auto"
   >
-    <h1 class="text-5xl font-semibold">Dra. Vera Júlia Matos</h1>
-    <h2 class="text-2xl font-medium">Advogada Trabalhista</h2>
-    <h2 class="text-lg font-semibold">Defendendo Seus Direitos no Trabalho</h2>
+    <h1
+      class="text-5xl font-semibold md:text-left md:max-w-[400px] lg:text-6xl lg:max-w-[500px]"
+    >
+      Dra. Vera Júlia Matos
+    </h1>
+    <h2
+      class="text-2xl font-medium md:font-semibold md:text-left md:max-w-[400px] lg:text-3xl"
+    >
+      Advogada Trabalhista
+    </h2>
+    <h3 class="text-lg font-semibold md:text-left md:max-w-[400px] lg:text-xl">
+      Defendendo Seus Direitos no Trabalho
+    </h3>
     <p class="hidden">
       Sofreu uma injustiça no ambiente de trabalho? Nossa especialidade é
       garantir que seus direitos sejam respeitados e que você receba a
       compensação que merece.
     </p>
     <a
-      href=""
-      class="botao-brilhante block mt-12 p-2 bg-dourado-ocre font-bold text-xl w-full max-w-60 mx-auto"
+      href="#contato"
+      class="botao-brilhante block mt-12 p-2 bg-dourado-ocre font-bold text-xl w-full max-w-60 mx-auto shadow-md md:mt-12 md:m-0"
       >Agende uma Análise <br />Gratuita do seu Caso</a
     >
   </div>
-  <a href="" class="hidden relative">Fale Conosco pelo WhatsApp</a>
 </section>
 
 <style>
@@ -109,4 +159,57 @@ import logo from "../../assets/hero-assets/VJM (1)-Photoroom.png";
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
+
+  .shake-menu {
+    transform-origin: bottom center;
+    animation: periodicShake 4s ease-in-out infinite;
+  }
+
+  @keyframes periodicShake {
+    0%,
+    75%,
+    100% {
+      transform: rotate(0deg);
+    }
+    88% {
+      transform: rotate(12deg);
+    }
+    85% {
+      transform: rotate(-12deg);
+    }
+    90% {
+      transform: rotate(12deg);
+    }
+    95% {
+      transform: rotate(-12deg);
+    }
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("meuVideo");
+    const fallbackImg = document.getElementById("fallbackImg");
+
+    function checkFallback() {
+      // Se a tela estiver em lg (1024px ou mais)
+      if (window.innerWidth >= 1024) {
+        // Se o vídeo não tiver carregado completamente após 3 segundos...
+        if (video.readyState < 3) {
+          fallbackImg.classList.remove("hidden");
+        } else {
+          fallbackImg.classList.add("hidden");
+        }
+      } else {
+        // Em telas menores, sempre garantir que o fallback esteja escondido
+        fallbackImg.classList.add("hidden");
+      }
+    }
+
+    // Verifica após 3 segundos se o fallback deve ser exibido
+    setTimeout(checkFallback, 3000);
+
+    // Sempre que o usuário redimensionar a janela, refaz a verificação
+    window.addEventListener("resize", checkFallback);
+  });
+</script>
