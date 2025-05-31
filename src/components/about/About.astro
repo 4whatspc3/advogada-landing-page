@@ -3,26 +3,33 @@ import { Image } from "astro:assets";
 import aboutImage from "../../assets/about-assets/about-image.jpg";
 ---
 
-<section class="min-h-svh bg-branco-gelo p-6 flex flex-col gap-10">
+<section
+  class="min-h-svh bg-branco-gelo p-6 flex flex-col gap-10 sm:gap-14 lg:bg-[url(src/assets/about-assets/v4.png)] lg:bg-cover lg:bg-bottom"
+>
   <h2
-    class="font-spectral text-3xl text-center text-azul-marinho-escuro font-semibold"
+    class="font-spectral text-3xl text-center text-azul-marinho-escuro text-shadow-2xs font-semibold"
   >
     Nossa Missão é a Sua Justiça
   </h2>
-  <Image
-    src={aboutImage}
-    alt="Dra. Vera Julia Matos atendendo um trabalhador em seu escritório"
-    width={1280}
-    height={1917}
-    format="avif"
-    class="w-80 h-80 object-cover outline-dourado-ocre outline-2 mx-auto"
-  />
-  <p class="font-serif text-lg text-justify text-cinza-escuro">
-    Fundado pela Dra. Ana Júlia Matos, nosso escritório nasceu da convicção de
-    que todo trabalhador merece respeito, dignidade e um tratamento justo. Com
-    anos de experiência dedicados exclusivamente ao direito do trabalho,
-    compreendemos os desafios e a angústia que nossos clientes enfrentam.
-    Abordamos cada caso com empatia, rigor técnico e a determinação necessária
-    para lutar incansavelmente por seus direitos, do início ao fim do processo
-  </p>
+  <div class="flex flex-col gap-10 sm:gap-14 lg:flex-row lg:m-auto">
+    <Image
+      src={aboutImage}
+      alt="Dra. Vera Julia Matos atendendo um trabalhador em seu escritório"
+      width={1280}
+      height={1917}
+      format="avif"
+      class="w-full h-80 max-w-[480px] object-cover outline-dourado-ocre outline-2 shadow-md mx-auto sm:h-100 lg:w-120 lg:h-120"
+    />
+    <p
+      class="font-serif text-lg text-justify text-cinza-escuro text-shadow-2xs w-full max-w-[480px] mx-auto lg:my-auto lg:text-2xl"
+    >
+      Fundado pela Dra. Ana Júlia Matos, nosso escritório nasceu da convicção de
+      que todo trabalhador merece respeito, dignidade e um tratamento justo. Com
+      anos de experiência dedicados exclusivamente ao direito do trabalho,
+      compreendemos os desafios e a angústia que nossos clientes enfrentam.
+      Abordamos cada caso com empatia, rigor técnico e a determinação necessária
+      para lutar incansavelmente por seus direitos, do início ao fim do
+      processo.
+    </p>
+  </div>
 </section>
