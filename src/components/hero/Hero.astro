@@ -5,6 +5,7 @@ import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
 ---
 
 <section
+  id="inicio"
   class="min-h-svh flex flex-col gap-8 bg-[url(src/assets/hero-assets/fundo-hero.jpg)] bg-cover bg-center relative lg:gap-20 lg:bg-none"
 >
   <div id="video-container" class="hidden absolute inset-0 lg:block">
@@ -46,19 +47,39 @@ import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
     <ul
       class="hidden lg:flex gap-4 text-branco-gelo bg-dourado-ocre font-spectral text-lg font-semibold p-4 m-6 mb-auto shadow-md"
     >
-      <li><a href="" class="border-r-1 border-branco-gelo pr-2">Início</a></li>
-      <li><a href="" class="border-r-1 border-branco-gelo pr-2">About</a></li>
-      <li>
-        <a href="" class="border-r-1 border-branco-gelo pr-2">Diferencial</a>
+      <li
+        class="hover:-translate-y-2 duration-500 ease-in-out border-r-1 border-branco-gelo pr-2"
+      >
+        <a href="#inicio">Início</a>
       </li>
-      <li>
-        <a href="" class="border-r-1 border-branco-gelo pr-2">Services</a>
+      <li
+        class="hover:-translate-y-2 duration-500 ease-in-out border-r-1 border-branco-gelo pr-2"
+      >
+        <a href="#sobre">Sobre</a>
       </li>
-      <li>
-        <a href="" class="border-r-1 border-branco-gelo pr-2">Depoimentos</a>
+      <li
+        class="hover:-translate-y-2 duration-500 ease-in-out border-r-1 border-branco-gelo pr-2"
+      >
+        <a href="#diferencial">Diferencial</a>
       </li>
-      <li><a href="" class="border-r-1 border-branco-gelo pr-2">FAQ</a></li>
-      <li><a href="">Contato</a></li>
+      <li
+        class="hover:-translate-y-2 duration-500 ease-in-out border-r-1 border-branco-gelo pr-2"
+      >
+        <a href="#services">Serviços</a>
+      </li>
+      <li
+        class="hover:-translate-y-2 duration-500 ease-in-out border-r-1 border-branco-gelo pr-2"
+      >
+        <a href="#depoimentos">Depoimentos</a>
+      </li>
+      <li
+        class="hover:-translate-y-2 duration-500 ease-in-out border-r-1 border-branco-gelo pr-2"
+      >
+        <a href="#FAQ">FAQ</a>
+      </li>
+      <li class="hover:-translate-y-2 duration-500 ease-in-out">
+        <a href="#contato">Contato</a>
+      </li>
     </ul>
     <div
       class="relative -translate-y-10 sm:-translate-x-6 sm:ml-auto sm:-translate-y-40 lg:hidden"
@@ -82,13 +103,21 @@ import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
           class="absolute text-lg text-center text-branco-gelo font-semibold font-spectral mt-4 p-4 -translate-x-15
                  flex flex-col gap-4 bg-dourado-ocre outline-2 outline-white sm:-translate-x-25"
         >
-          <li class="border-b-1 border-white"><a href="">Início</a></li>
-          <li class="border-b-1 border-white"><a href="">Sobre</a></li>
-          <li class="border-b-1 border-white"><a href="">Por que nós?</a></li>
-          <li class="border-b-1 border-white"><a href="">Services</a></li>
-          <li class="border-b-1 border-white"><a href="">Depoimentos</a></li>
-          <li class="border-b-1 border-white"><a href="">FAQ</a></li>
-          <li class="border-b-1 border-white"><a href="">Contato</a></li>
+          <li class="border-b-1 border-white"><a href="#inicio">Início</a></li>
+          <li class="border-b-1 border-white"><a href="#sobre">Sobre</a></li>
+          <li class="border-b-1 border-white">
+            <a href="#diferencial">Diferencial</a>
+          </li>
+          <li class="border-b-1 border-white">
+            <a href="#services">Serviços</a>
+          </li>
+          <li class="border-b-1 border-white">
+            <a href="#depoimentos">Depoimentos</a>
+          </li>
+          <li class="border-b-1 border-white"><a href="#FAQ">FAQ</a></li>
+          <li class="border-b-1 border-white">
+            <a href="#contato">Contato</a>
+          </li>
         </ul>
       </details>
     </div>
