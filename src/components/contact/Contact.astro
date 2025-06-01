@@ -5,30 +5,31 @@ import wpIcon from "../../assets/contact-assets/whatsapp-svgrepo-com (1).svg";
 const baseUrl = import.meta.env.PUBLIC_BASE_URL;
 ---
 
-<section id="contato" class="min-h-svh relative flex flex-col gap-2">
-  <Image
-    src={bgContact}
-    alt="background image"
-    class="top-0 w-full h-full object-cover object-right absolute"
-  />
-  <div class="absolute w-full h-full bg-black/65"></div>
+<section
+  id="contato"
+  class="min-h-svh relative flex flex-col gap-2 bg-[url(src/assets/contact-assets/bg-contact.jpg)] bg-cover bg-right p-6 lg:p-8"
+>
+  <div class="absolute inset-0 w-full h-full bg-black/65"></div>
   <h2
     class="relative p-6 text-branco-gelo text-3xl text-center text-outline font-bold font-spectral"
   >
     Dê o Primeiro Passo Para Defender Seus Direitos
   </h2>
   <h3
-    class="relative p-6 font-spectral text-lg text-center text-branco-gelo font-medium"
+    class="relative p-6 font-spectral text-lg text-center text-branco-gelo font-medium w-full max-w-160 mx-auto"
   >
     Sua mensagem é confidencial e será analisada por um especialista. Preencha o
-    formulário abaixo ou, se preferir, nos chame diretamente no <span
-      class="text-emerald-500 font-bold">WhatsApp</span
-    >.
+    formulário abaixo ou, se preferir, nos chame diretamente no <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsappLink text-emerald-500 font-bold">WhatsApp</a
+    >
   </h3>
   <form
     action="https://formsubmit.co/8cad7644f3d0878fa0988faee39f8848"
     method="POST"
-    class="relative m-4 p-3 flex flex-col gap-6 outline-2 outline-dourado-ocre"
+    class="relative m-4 p-3 flex flex-col gap-6 outline-2 outline-dourado-ocre w-full max-w-140 mx-auto"
     id="submitForm"
     target="formsubmit-iframe"
   >
@@ -143,18 +144,21 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
     >
   </form>
 
-  <section class="relative m-4 p-2 outline-2 outline-dourado-ocre">
-    <div class="flex items-center justify-center gap-6 bg-branco-gelo/20 p-2">
-      <p class="font-serif text-lg font-semibold text-white w-1/2">
+  <section
+    class="relative m-4 p-2 outline-2 outline-dourado-ocre w-full max-w-140 mx-auto"
+  >
+    <div
+      class="flex items-center justify-center gap-6 bg-branco-gelo/20 p-2 sm:gap-0"
+    >
+      <p class="font-serif text-lg font-semibold text-white w-1/2 sm:w-2/3">
         Se prefere contato no WhatsApp 👉
       </p>
       <a
-        id="whatsappLink"
         href="#"
         aria-label="WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
-        class="block shake-anchor"
+        class="whatsappLink block shake-anchor sm:-translate-x-10 z-10"
       >
         <Image
           src={wpIcon}
@@ -241,12 +245,16 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
     window.open(url.toString(), "_blank", "noopener,noreferrer");
   }
 
-  document.getElementById("whatsappLink").addEventListener("click", (e) => {
-    e.preventDefault();
+  const wpLink = document.querySelectorAll(".whatsappLink");
 
-    const message =
-      "Olá, tudo bem? Tenho interesse em saber como a Dra. Vera Júlia Matos pode ajudar no meu caso.\n\nFico no aguardo da resposta.";
+  wpLink.forEach((link) =>
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
 
-    redirectToWhatsapp(message);
-  });
+      const message =
+        "Olá, tudo bem? Tenho interesse em saber como a Dra. Vera Júlia Matos pode ajudar no meu caso.\n\nFico no aguardo da resposta.";
+
+      redirectToWhatsapp(message);
+    })
+  );
 </script>
