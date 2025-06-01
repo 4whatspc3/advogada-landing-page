@@ -11,28 +11,6 @@ import vinculo from "../../assets/services-assets/vinculo.jpg";
 import treze from "../../assets/services-assets/13.jpg";
 ---
 
-<style>
-  @media (min-width: 1024px) {
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-300%);
-      }
-    }
-    .carousel-track {
-      animation: scroll 60s linear infinite;
-      /* opcional: assegurar que esteja rodando por padrão */
-      animation-play-state: running;
-    }
-    /* para pausar quando o mouse estiver sobre o track */
-    .carousel-track:hover {
-      animation-play-state: paused;
-    }
-  }
-</style>
-
 <section
   class="min-h-svh bg-branco-gelo p-6 flex flex-col gap-10 sm:gap-12 lg:gap-16 lg:bg-[url(src/assets/services-assets/bgservices.png)] lg:bg-cover lg:bg-center"
 >
@@ -51,7 +29,6 @@ import treze from "../../assets/services-assets/13.jpg";
   <div class="relative mt-20">
     <!-- Mobile/Tablet: empilhado -->
     <div class="flex flex-col gap-8 sm:gap-12 lg:hidden">
-      <!-- Artigo 1 -->
       <article
         class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
@@ -69,7 +46,6 @@ import treze from "../../assets/services-assets/13.jpg";
         </h3>
       </article>
 
-      <!-- Artigo 2 -->
       <article
         class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
@@ -87,7 +63,6 @@ import treze from "../../assets/services-assets/13.jpg";
         </h3>
       </article>
 
-      <!-- Artigo 3 -->
       <article
         class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
@@ -105,7 +80,6 @@ import treze from "../../assets/services-assets/13.jpg";
         </h3>
       </article>
 
-      <!-- Artigo 4 -->
       <article
         class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
@@ -123,7 +97,6 @@ import treze from "../../assets/services-assets/13.jpg";
         </h3>
       </article>
 
-      <!-- Artigo 5 -->
       <article
         class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
@@ -141,7 +114,6 @@ import treze from "../../assets/services-assets/13.jpg";
         </h3>
       </article>
 
-      <!-- Artigo 6 -->
       <article
         class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
@@ -159,7 +131,6 @@ import treze from "../../assets/services-assets/13.jpg";
         </h3>
       </article>
 
-      <!-- Artigo 7 -->
       <article
         class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
@@ -177,7 +148,6 @@ import treze from "../../assets/services-assets/13.jpg";
         </h3>
       </article>
 
-      <!-- Artigo 8 -->
       <article
         class="min-h-[240px] w-full max-w-100 mx-auto relative overflow-hidden outline-dourado-ocre outline-2 shadow-md"
       >
@@ -197,7 +167,9 @@ import treze from "../../assets/services-assets/13.jpg";
     </div>
 
     <!-- Desktop (lg): carrossel automático -->
-    <div class="hidden lg:block overflow-hidden py-6 lg:py-8 w-[80%] mx-auto">
+    <div
+      class="hidden lg:block overflow-hidden py-6 lg:py-8 w-[90%] mx-auto 2xl:w-[80%] border-l-2 border-r-2 border-dourado-ocre"
+    >
       <div class="carousel-track flex lg:gap-x-6">
         <!-- Primeira sequência de 8 artigos -->
         <article
@@ -476,3 +448,23 @@ import treze from "../../assets/services-assets/13.jpg";
     </div>
   </div>
 </section>
+
+<style>
+  @media (min-width: 1024px) {
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-300%);
+      }
+    }
+    .carousel-track {
+      animation: scroll 80s linear infinite;
+      animation-play-state: running;
+    }
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+  }
+</style>
