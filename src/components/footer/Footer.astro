@@ -4,44 +4,93 @@ import { Image } from "astro:assets";
 import logo from "../../assets/hero-assets/VJM (1)-Photoroom.png";
 ---
 
-<footer class="min-h-svh bg-branco-gelo p-6 flex flex-col gap-10">
-  <Image
-    src={logo}
-    alt="logo"
-    width={500}
-    height={500}
-    class="w-50 h-50 mx-auto"
-  />
-
+<footer
+  class="min-h-svh bg-branco-gelo p-6 grid grid-rows-auto grid-cols-1 gap-10
+         lg:grid-rows-[300px_100px] lg:grid-cols-[200px_400px_400px_auto]
+         lg:min-h-0 lg:h-fit lg:p-8"
+>
   <section
-    class="text-center font-semibold font-spectral text-lg text-cinza-escuro pb-2 border-b-2 border-dourado-ocre"
+    class="text-center font-semibold font-spectral text-lg text-cinza-escuro pb-2 border-b-2 border-dourado-ocre w-full max-w-140 mx-auto
+          lg:col-start-2 lg:col-end-3 lg:pb-0 lg:border-b-0 lg:border-r-2"
   >
+    <Image
+      src={logo}
+      alt="logo"
+      width={500}
+      height={500}
+      class="w-50 h-50 mx-auto"
+    />
     <h2>Vera Júlia Matos</h2>
     <h3>Advogada Trabalhista</h3>
     <h4>Defendendo quem constrói o país</h4>
   </section>
-  <address
-    class="not-italic font-serif text-lg text-center pb-2 border-b-2 border-dourado-ocre"
-  >
-    <p>Endereço Fictício:</p>
-    <p>Av. Tancredo Neves, 1234, Sala 56</p>
-    <p>Edifício Empresarial Futuro</p>
-    <p>Salvador - BA, CEP 41820-021</p>
-  </address>
+  <section class="flex flex-col gap-10 lg:border-r-2 border-dourado-ocre">
+    <address
+      class="not-italic font-serif text-lg text-center pb-2 border-b-2 border-dourado-ocre w-full max-w-140 mx-auto
+           lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-4 lg:pb-0 lg:border-b-0 lg:text-left lg:my-auto"
+    >
+      <p>Av. Tancredo Neves, 1234, Sala 56</p>
+      <p>Edifício Empresarial Futuro</p>
+      <p>Salvador - BA, CEP 41820-021</p>
+    </address>
 
-  <section
-    class="font-serif text-lg text-center pb-2 border-b-2 border-dourado-ocre"
-  >
-    <p>Tel: (XX) 3333-4444</p>
-    <p>Email: contato@matosadvocacia.com.br</p>
+    <section
+      class="font-serif text-lg text-center pb-2 border-b-2 border-dourado-ocre w-full max-w-140 mx-auto
+             lg:pb-0 lg:border-b-0 lg:text-left"
+    >
+      <div class="flex gap-2">
+        <Image
+          src="/footer-icons/phone-outline (1).svg"
+          alt="icone de um teleone"
+          aria-hidden="true"
+          class="w-6 md:w-8"
+          width={8}
+          height={8}
+        />
+        <a href="tel:+5511933334444">Tel: (XX) 3333-4444</a>
+      </div>
+      <div class="flex gap-2">
+        <Image
+          src="/footer-icons/email-outline (1).svg"
+          alt="icone de um teleone"
+          aria-hidden="true"
+          class="w-6 md:w-8"
+          width={8}
+          height={8}
+        />
+        <a href="mailto:contato@docesabor.com.br"
+          >Email: contato@matosadvocacia.com.br</a
+        >
+      </div>
+      <div class="flex gap-2">
+        <Image
+          src="/footer-icons/instagram(1).svg"
+          alt="icone do Instagram"
+          aria-hidden="true"
+          class="w-6 md:w-8"
+          width={8}
+          height={8}
+        />
+        <a
+          href="https://www.instagram.com/"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer">@dra.vera.advogadatrabalhista</a
+        >
+      </div>
+    </section>
   </section>
 
-  <p class="font-serif text-lg text-center pb-2 border-b-2 border-dourado-ocre">
+  <p
+    class="font-serif text-lg text-center pb-2 border-b-2 border-dourado-ocre w-full max-w-140 mx-auto
+            lg:m-0 lg:border-0 lg:text-left lg:row-start-1 lg:row-end-2 lg:col-start-4 lg:col-end-5 lg:self-end"
+  >
     © 2025 Ana Júlia Matos Advocacia. Todos os direitos reservados.
   </p>
 
   <p
-    class="italic font-serif text-base text-justify my-auto p-2 bg-white outline-2 outline-dourado-ocre"
+    class="italic font-serif text-base text-center my-auto p-2 bg-white outline-2 outline-dourado-ocre w-full max-w-140 mx-auto
+            lg:h-fit lg:m-0 lg:rows-start-2 lg:col-start-1 lg:col-end-5 lg:self-center lg:justify-self-center"
   >
     Disclaimer: Este é um site fictício desenvolvido exclusivamente para fins de
     portfólio.
