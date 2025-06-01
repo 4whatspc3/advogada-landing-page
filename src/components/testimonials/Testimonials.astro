@@ -2,10 +2,10 @@
 import { Image } from "astro:assets";
 
 import marcos from "../../assets/testimonials-assets/marcos.jpg";
-import luisa from "../../assets/testimonials-assets/luisa.jpg";
+import luisa from "../../assets/testimonials-assets/analista.jpg";
 import carlos from "../../assets/testimonials-assets/carlos.jpg";
 import ricardo from "../../assets/testimonials-assets/ricardo.jpg";
-import beatriz from "../../assets/testimonials-assets/beatriz.jpg";
+import beatriz from "../../assets/testimonials-assets/pj.jpg";
 import paulo from "../../assets/testimonials-assets/paulo.jpg";
 ---
 
@@ -18,7 +18,7 @@ import paulo from "../../assets/testimonials-assets/paulo.jpg";
     A Experiência de Nossos Clientes
   </h2>
   <section
-    class="grid grid-rows-auto grid-cols-1 gap-6 sm:gap-10 lg:grid-rows-[540px_auto] lg:grid-cols-3 lg:m-auto"
+    class="grid grid-rows-auto grid-cols-1 gap-6 sm:gap-10 lg:grid-rows-auto lg:grid-cols-2 lg:m-auto"
   >
     <article
       class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-6 lg:h-120 hover:scale-105 duration-500 ease-in-out"
@@ -34,7 +34,7 @@ import paulo from "../../assets/testimonials-assets/paulo.jpg";
       </div>
 
       <p
-        class="text-center text-cinza-escuro font-serif text-lg font-medium italic leading-7"
+        class="text-center text-cinza-escuro font-serif text-lg font-medium italic"
       >
         "Sentia-me perdido após ser demitido injustamente. A Dra. Ana Júlia e
         sua equipe me deram segurança e conseguiram reverter a situação. Sou
@@ -47,7 +47,7 @@ import paulo from "../../assets/testimonials-assets/paulo.jpg";
       </h2>
     </article>
     <article
-      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-4 lg:h-120 hover:scale-105 duration-500 ease-in-out"
+      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-6 lg:h-120 hover:scale-105 duration-500 ease-in-out"
     >
       <div
         class="w-40 h-40 rounded-full outline-2 outline-dourado-ocre overflow-hidden mx-auto lg:min-w-40 lg:min-h-40"
@@ -55,24 +55,25 @@ import paulo from "../../assets/testimonials-assets/paulo.jpg";
         <Image
           src={luisa}
           alt="icone"
-          class="w-70 h-70 object-cover object-[center_-50px]"
+          class="w-80 h-80 object-cover object-[center_-36px]"
         />
       </div>
+
       <p
-        class="text-center text-cinza-escuro font-serif text-lg font-medium italic leading-7"
+        class="text-center text-cinza-escuro font-serif text-lg font-medium italic"
       >
         "Enfrentei uma situação de assédio que me adoeceu. Encontrei na Dra. Ana
         o apoio e a força que eu não tinha para lutar. A justiça foi feita.
-        Recomendo a todos."
+        Recomendo a todos"
       </p>
       <h2
         class="text-lg text-center font-spectral font-semibold text-azul-marinho-escuro"
       >
-        L. S., Ex-Analista Financeira
+        Luisa S., Ex-Analista Financeira
       </h2>
     </article>
     <article
-      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-4 lg:h-120 hover:scale-105 duration-500 ease-in-out"
+      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-6 lg:h-120 hover:scale-105 duration-500 ease-in-out"
     >
       <div
         class="w-40 h-40 rounded-full outline-2 outline-dourado-ocre overflow-hidden mx-auto lg:min-w-40 lg:min-h-40"
@@ -80,15 +81,16 @@ import paulo from "../../assets/testimonials-assets/paulo.jpg";
         <Image
           src={carlos}
           alt="icone"
-          class="w-70 h-70 object-cover object-[-120px_-50px]"
+          class="w-80 h-80 object-cover object-[-150px_-50px]"
         />
       </div>
+
       <p
-        class="text-center text-cinza-escuro font-serif text-lg font-medium italic leading-7"
+        class="text-center text-cinza-escuro font-serif text-lg font-medium italic"
       >
         "Anos trabalhando além do horário sem receber o correto. Eles analisaram
         tudo e garantiram que eu recebesse cada centavo devido. Excelentes
-        profissionais."
+        profissionais"
       </p>
       <h2
         class="text-lg text-center font-spectral font-semibold text-azul-marinho-escuro"
@@ -97,49 +99,27 @@ import paulo from "../../assets/testimonials-assets/paulo.jpg";
       </h2>
     </article>
     <article
-      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-4 lg:h-140 hover:scale-105 duration-500 ease-in-out"
+      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-6 lg:h-120 hover:scale-105 duration-500 ease-in-out"
     >
       <div
         class="w-40 h-40 rounded-full outline-2 outline-dourado-ocre overflow-hidden mx-auto lg:min-w-40 lg:min-h-40"
       >
         <Image
-          src={ricardo}
+          src={beatriz}
           alt="icone"
-          class="w-70 h-70 object-cover object-[center_-10px]"
+          class="w-80 h-80 object-cover object-[center_-40px]"
         />
       </div>
+
       <p
-        class="text-center text-cinza-escuro font-serif text-lg font-medium italic leading-7"
-      >
-        "Sofri um acidente na empresa e tive muita dificuldade para conseguir o
-        suporte necessário. Me senti desamparado. A Dra. Ana e sua equipe foram
-        essenciais, não só para garantir meus direitos e a estabilidade, mas
-        também pelo acolhimento em um momento tão difícil. Lutaram por mim até o
-        fim."
-      </p>
-      <h2
-        class="text-lg text-center font-spectral font-semibold text-azul-marinho-escuro"
-      >
-        Ricardo Almeida, Ex-Auxiliar de Produção
-      </h2>
-    </article>
-    <article
-      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-4 lg:h-140 hover:scale-105 duration-500 ease-in-out"
-    >
-      <div
-        class="w-40 h-40 rounded-full outline-2 outline-dourado-ocre overflow-hidden mx-auto lg:min-w-40 lg:min-h-40"
-      >
-        <Image src={beatriz} alt="icone" class="w-70 h-70 object-cover" />
-      </div>
-      <p
-        class="text-center text-cinza-escuro font-serif text-lg font-medium italic leading-7"
+        class="text-center text-cinza-escuro font-serif text-lg font-medium italic"
       >
         "Fui contratada como 'PJ', mas na prática tinha chefe, horário fixo e
         todas as obrigações de uma funcionária CLT, só que sem os direitos.
         Quando fui dispensada, procurei a Dra. Ana Júlia. Ela e sua equipe foram
         fantásticas em reunir as provas e conseguiram o reconhecimento do
         vínculo empregatício. Recebi tudo que me era devido. Foi uma verdadeira
-        reparação."
+        reparação"
       </p>
       <h2
         class="text-lg text-center font-spectral font-semibold text-azul-marinho-escuro"
@@ -148,7 +128,7 @@ import paulo from "../../assets/testimonials-assets/paulo.jpg";
       </h2>
     </article>
     <article
-      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-4 lg:h-140 hover:scale-105 duration-500 ease-in-out"
+      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-6 lg:h-120 hover:scale-105 duration-500 ease-in-out"
     >
       <div
         class="w-40 h-40 rounded-full outline-2 outline-dourado-ocre overflow-hidden mx-auto lg:min-w-40 lg:min-h-40"
@@ -156,22 +136,51 @@ import paulo from "../../assets/testimonials-assets/paulo.jpg";
         <Image
           src={paulo}
           alt="icone"
-          class="w-80 h-80 object-cover object-center"
+          class="w-80 h-80 object-cover object-[center_-30px]"
         />
       </div>
+
       <p
-        class="text-center text-cinza-escuro font-serif text-lg font-medium italic leading-7"
+        class="text-center text-cinza-escuro font-serif text-lg font-medium italic"
       >
         "A empresa onde eu trabalhava atrasava salários e não depositava o FGTS
         corretamente. Eu não aguentava mais, mas não queria 'pedir as contas' e
         perder meus direitos. A Dra. Ana me orientou sobre a rescisão indireta e
         cuidou de tudo. Consegui me desligar da empresa recebendo tudo o que me
-        era devido, como se eu tivesse sido demitida. Foi um alívio enorme."
+        era devido, como se eu tivesse sido demitida. Foi um alívio enorme"
       </p>
       <h2
         class="text-lg text-center font-spectral font-semibold text-azul-marinho-escuro"
       >
         Paulo Vieira, Ex-Motorista
+      </h2>
+    </article>
+    <article
+      class="w-full max-w-120 mx-auto p-4 bg-branco-gelo flex flex-col justify-between gap-6 lg:h-120 hover:scale-105 duration-500 ease-in-out"
+    >
+      <div
+        class="w-40 h-40 rounded-full outline-2 outline-dourado-ocre overflow-hidden mx-auto lg:min-w-40 lg:min-h-40"
+      >
+        <Image
+          src={ricardo}
+          alt="icone"
+          class="w-80 h-80 object-cover object-[center_-36px]"
+        />
+      </div>
+
+      <p
+        class="text-center text-cinza-escuro font-serif text-lg font-medium italic"
+      >
+        "Sofri um acidente na empresa e tive muita dificuldade para conseguir o
+        suporte necessário. Me senti desamparado. A Dra. Ana e sua equipe foram
+        essenciais, não só para garantir meus direitos e a estabilidade, mas
+        também pelo acolhimento em um momento tão difícil. Lutaram por mim até o
+        fim"
+      </p>
+      <h2
+        class="text-lg text-center font-spectral font-semibold text-azul-marinho-escuro"
+      >
+        Ricardo Almeida, Ex-Auxiliar de Produção
       </h2>
     </article>
   </section>
