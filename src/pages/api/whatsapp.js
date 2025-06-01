@@ -1,14 +1,20 @@
-import path from 'path';
-import dotenv from 'dotenv';
+let envConfigured = false;
 
-dotenv.config({ path: path.join(process.cwd(), '.env.development') });
+// Se não estiver em produção, carrega as variáveis com dotenv
+if (process.env.NODE_ENV !== 'production') {
+  // Importa as dependências dinamicamente, pois o Cloudflare pode não suportá-las
+  const { default: dotenv } = await import('dotenv');
+  const { join } = await import('path');
+  dotenv.config({ path: join(process.cwd(), '.env.development') });
+  envConfigured = true;
+}
 
 export const prerender = false;
 
 export async function GET(context) {
-  // Usa o runtime se disponível, caso contrário process.env
-  const env = (context.locals && context.locals.runtime && context.locals.runtime.env) || process.env;
-  
+  // Usa o runtime se disponível; caso contrário, process.env (já configurado ou proveniente do Cloudflare)
+  const env = (context.locals?.runtime?.env) || process.env;
+
   console.log("[whatsapp] WP_NUMBER (process.env):", process.env.WP_NUMBER);
   console.log("[whatsapp] Bindings disponíveis:", Object.keys(env));
 
