@@ -7,9 +7,13 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
 
 <section
   id="contato"
+  role="region"
+  aria-label="Seção de contato"
   class="min-h-svh relative flex flex-col gap-2 bg-[url(/contact/bg-contact.jpg)] bg-cover bg-right p-6 lg:p-8"
 >
-  <div class="absolute inset-0 w-full h-full bg-black/65"></div>
+  <div class="absolute inset-0 w-full h-full bg-black/65" aria-hidden="true">
+  </div>
+
   <h2
     class="relative p-6 text-branco-gelo text-3xl text-center text-outline font-bold font-spectral"
   >
@@ -19,19 +23,24 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
     class="relative p-6 font-spectral text-lg text-center text-branco-gelo font-medium w-full max-w-160 mx-auto"
   >
     Sua mensagem é confidencial e será analisada por um especialista. Preencha o
-    formulário abaixo ou, se preferir, nos chame diretamente no <a
+    formulário abaixo ou, se preferir, nos chame diretamente no
+    <a
       href="#"
       target="_blank"
       rel="noopener noreferrer"
-      class="whatsappLink text-emerald-500 font-bold">WhatsApp</a
+      class="whatsappLink text-emerald-500 font-bold"
+      aria-label="Abrir WhatsApp"
     >
+      WhatsApp
+    </a>
   </h3>
+
   <form
+    id="submitForm"
     action="https://formsubmit.co/8cad7644f3d0878fa0988faee39f8848"
     method="POST"
-    class="relative m-4 p-3 flex flex-col gap-6 outline-2 outline-dourado-ocre w-full max-w-140 mx-auto"
-    id="submitForm"
     target="formsubmit-iframe"
+    class="relative m-4 p-3 flex flex-col gap-6 outline-2 outline-dourado-ocre w-full max-w-140 mx-auto"
   >
     <input
       type="hidden"
@@ -49,28 +58,34 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
       value="Ganhe dinheiro rápido, Oferta exclusiva, Clique aqui agora, 100% grátis, Sem compromisso, Aproveite antes que acabe, Você foi selecionado, Parabéns, você ganhou, Não perca essa chance, Garantia de satisfação, Livre de riscos, Apenas hoje, Oferta limitada, Faça seu cadastro agora, Dinheiro fácil, Trabalhe de casa, Sem custo, Crédito aprovado, Aumente seus ganhos, Promoção imperdível"
     />
     <input type="hidden" name="_template" value="table" />
-    <input type="text" name="_honey" style="display:none" aria-hidden="true" />
+    <input type="text" name="_honey" style="display: none" aria-hidden="true" />
     <input type="hidden" name="_captcha" value="true" />
+
     <div class="flex flex-col gap-2 p-2 bg-branco-gelo/20">
       <label
         for="nome"
-        class="text-lg font-serif font-semibold text-branco-gelo">Nome:</label
+        class="text-lg font-serif font-semibold text-branco-gelo"
       >
+        Nome:
+      </label>
       <input
         type="text"
-        name="nome"
         id="nome"
+        name="nome"
         placeholder="Maria Oliveira"
         class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
         required
+        aria-required="true"
       />
     </div>
+
     <div class="flex flex-col gap-2 p-2 bg-branco-gelo/20">
       <label
         for="telefone"
         class="text-lg font-serif font-semibold text-branco-gelo"
-        >Nº de telefone/celular:</label
       >
+        Nº de telefone/celular:
+      </label>
       <input
         type="tel"
         id="telefone"
@@ -79,27 +94,35 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
         required
         title="Digite um número de telefone válido no formato (99) 99999-9999"
         class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
+        aria-required="true"
       />
     </div>
+
     <div class="flex flex-col gap-2 p-2 bg-branco-gelo/20">
       <label
         for="email"
-        class="text-lg font-serif font-semibold text-branco-gelo">Email:</label
+        class="text-lg font-serif font-semibold text-branco-gelo"
       >
+        Email:
+      </label>
       <input
         type="email"
-        name="email"
         id="email"
+        name="email"
         placeholder="seuemail@email.com"
         required
         class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
+        aria-required="true"
       />
     </div>
+
     <div class="flex flex-col gap-2 p-2 bg-branco-gelo/20">
       <label
         for="data"
-        class="text-lg font-serif font-semibold text-branco-gelo">Data:</label
+        class="text-lg font-serif font-semibold text-branco-gelo"
       >
+        Data:
+      </label>
       <input
         type="date"
         id="data"
@@ -107,12 +130,14 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
         class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
       />
     </div>
+
     <div class="flex flex-col gap-2 p-2 bg-branco-gelo/20">
       <label
         for="hora"
         class="text-lg font-serif font-semibold text-branco-gelo"
-        >Horário:</label
       >
+        Horário:
+      </label>
       <input
         type="time"
         id="hora"
@@ -120,13 +145,14 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
         class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
       />
     </div>
+
     <div class="flex flex-col gap-2 p-2 bg-branco-gelo/20">
       <label
         for="descricao"
         class="text-lg font-serif font-semibold text-branco-gelo"
-        >Como posso te ajudar?</label
       >
-
+        Como posso te ajudar?
+      </label>
       <textarea
         id="descricao"
         name="descricao"
@@ -136,37 +162,46 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
         class="p-1 border-1 border-dourado-ocre w-full placeholder-branco-gelo text-branco-gelo font-serif"
       ></textarea>
     </div>
-    <input type="text" name="_honey" aria-hidden="true" style="display:none" />
+
+    <input type="text" name="_honey" style="display: none" aria-hidden="true" />
+
     <iframe
       name="formsubmit-iframe"
       id="formsubmit-iframe"
       style="display: none; border: none; width: 100%; height: 400px;"></iframe>
+
     <button
       type="submit"
-      class="bg-dourado-ocre outline-1 p-2 w-full hover:scale-105 font-spectral font-bold text-2xl text-branco-gelo"
-      >Enviar</button
+      class="bg-dourado-ocre outline-1 p-2 w-full hover:scale-101 duration-300 ease-in-out transition-transform font-spectral font-bold text-2xl text-branco-gelo"
     >
+      Enviar
+    </button>
   </form>
 
   <section
+    role="region"
+    aria-labelledby="whatsapp-heading"
     class="relative m-4 p-2 outline-2 outline-dourado-ocre w-full max-w-140 mx-auto"
   >
     <div
       class="flex items-center justify-center gap-6 bg-branco-gelo/20 p-2 sm:gap-0"
     >
-      <p class="font-serif text-lg font-semibold text-white w-1/2 sm:w-2/3">
-        Se prefere contato no WhatsApp 👉
+      <p
+        id="whatsapp-heading"
+        class="font-serif text-lg font-semibold text-white w-1/2 sm:w-2/3"
+      >
+        Se prefere contato no WhatsApp
       </p>
       <a
         href="#"
-        aria-label="WhatsApp"
+        class="whatsappLink block shake-anchor sm:-translate-x-10 z-10"
+        aria-label="Entrar em contato pelo WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
-        class="whatsappLink block shake-anchor sm:-translate-x-10 z-10"
       >
         <Image
           src={wpIcon}
-          alt="whats app icon"
+          alt="Ícone do WhatsApp"
           width={200}
           height={200}
           class="w-12 min-w-12 h-12 shrink-0"
@@ -206,39 +241,28 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
 
 <script>
   const telefoneInput = document.getElementById("telefone");
-
   telefoneInput.addEventListener("input", function (e) {
     let valor = e.target.value.replace(/\D/g, "");
-
-    // Aplica máscara: (00) 00000-0000
     if (valor.length > 2)
       valor = `(${valor.substring(0, 2)}) ${valor.substring(2)}`;
     if (valor.length > 10)
       valor = `${valor.substring(0, 10)}-${valor.substring(10)}`;
-
-    e.target.value = valor.substring(0, 15); // Limita o comprimento
+    e.target.value = valor.substring(0, 15);
   });
 
   document
     .getElementById("submitForm")
     .addEventListener("submit", function (e) {
-      // Prevent default submission only for initial setup
       e.preventDefault();
-
-      // Create temporary hidden iframe
       const iframe = document.getElementById("formsubmit-iframe");
       iframe.style.display = "block";
-
-      // Programmatically submit form to preserve POST method
       this.submit();
     });
 
   window.addEventListener("message", function (e) {
     if (e.data === "form-submitted") {
       document.getElementById("formsubmit-iframe").style.display = "none";
-      // Show success message
       alert("Formulário preenchido com sucesso!");
-      // Optional: Reset form
       document.getElementById("submitForm").reset();
     }
   });
@@ -250,14 +274,11 @@ const baseUrl = import.meta.env.PUBLIC_BASE_URL;
   }
 
   const wpLink = document.querySelectorAll(".whatsappLink");
-
   wpLink.forEach((link) =>
     link.addEventListener("click", (e) => {
       e.preventDefault();
-
       const message =
         "Olá, tudo bem? Tenho interesse em saber como a Dra. Vera Júlia Matos pode ajudar no meu caso.\n\nFico no aguardo da resposta.";
-
       redirectToWhatsapp(message);
     })
   );

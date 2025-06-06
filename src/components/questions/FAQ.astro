@@ -1,9 +1,7 @@
----
-
----
-
 <section
   id="FAQ"
+  role="region"
+  aria-label="Questões mais frequentes"
   class="min-h-svh bg-branco-gelo p-6 flex flex-col gap-40 lg:p-8 lg:bg-[url(/services/bgservices.png)] lg:bg-cover lg:bg-bottom"
 >
   <h2
@@ -17,23 +15,32 @@
       class="w-full flex items-center justify-between p-4 bg-azul-marinho-escuro"
     >
       <section class="flex flex-col gap-4 pr-4 text-branco-gelo">
-        <h3 class="font-spectral font-extrabold text-base md:text-lg">
+        <h3
+          id="faq-q-0"
+          class="font-spectral font-extrabold text-base md:text-lg"
+        >
           Quanto custa para entrar com uma ação trabalhista?
         </h3>
         <p
+          id="faq-a-0"
+          role="region"
+          aria-labelledby="faq-q-0"
           data-index="0"
-          class="block paragraph-more hidden font-serif text-black font-medium bg-branco-gelo p-2 border-2 text-lg border-dourado-ocre w-[80%]"
+          class="paragraph-more hidden font-serif text-black font-medium bg-branco-gelo p-2 border-2 text-lg border-dourado-ocre w-[80%]"
         >
           Trabalhamos com honorários de êxito, ou seja, você só paga um
-          percentual do valor que receber ao final do processo. <u
-            class="font-semibold">Não há custos iniciais</u
-          > para dar entrada na ação.
+          percentual do valor que receber ao final do processo.
+          <u class="font-semibold">Não há custos iniciais</u> para dar entrada na
+          ação.
         </p>
       </section>
       <div>
         <button
           data-index="0"
           type="button"
+          aria-controls="faq-a-0"
+          aria-expanded="false"
+          aria-label="Mostrar resposta: Quanto custa para entrar com uma ação trabalhista?"
           class="display-more text-dourado-ocre bg-branco-gelo rounded-2xl hover:scale-105 border-2 border-dourado-ocre"
         >
           <svg
@@ -41,36 +48,48 @@
             class="h-5 w-5 inline-block m-2"
             viewBox="0 0 20 20"
             fill="currentColor"
+            aria-hidden="true"
+            focusable="false"
           >
             <path
               fill-rule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 
+                 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
               clip-rule="evenodd"></path>
           </svg>
         </button>
       </div>
     </article>
+
     <article
       class="w-full flex items-center justify-between p-4 bg-azul-marinho-escuro"
     >
       <section class="flex flex-col gap-4 pr-4 text-branco-gelo">
-        <h3 class="font-spectral font-extrabold text-base md:text-lg">
+        <h3
+          id="faq-q-1"
+          class="font-spectral font-extrabold text-base md:text-lg"
+        >
           A primeira consulta é cobrada?
         </h3>
         <p
+          id="faq-a-1"
+          role="region"
+          aria-labelledby="faq-q-1"
           data-index="1"
-          class="block paragraph-more hidden font-serif text-black font-medium bg-branco-gelo p-2 border-2 text-lg border-dourado-ocre w-[80%]"
+          class="paragraph-more hidden font-serif text-black font-medium bg-branco-gelo p-2 border-2 text-lg border-dourado-ocre w-[80%]"
         >
-          Não. A <u class="font-semibold">primeira análise</u> do seu caso é <u
-            class="font-semibold">totalmente gratuita</u
-          > e sem compromisso. É a nossa oportunidade de entender sua situação e
-          explicar como podemos ajudar.
+          Não. A <u class="font-semibold">primeira análise</u> do seu caso é
+          <u class="font-semibold">totalmente gratuita</u> e sem compromisso. É a
+          nossa oportunidade de entender sua situação e explicar como podemos ajudar.
         </p>
       </section>
       <div>
         <button
           data-index="1"
           type="button"
+          aria-controls="faq-a-1"
+          aria-expanded="false"
+          aria-label="Mostrar resposta: A primeira consulta é cobrada?"
           class="display-more text-dourado-ocre bg-branco-gelo rounded-2xl hover:scale-105 border-2 border-dourado-ocre"
         >
           <svg
@@ -78,28 +97,38 @@
             class="h-5 w-5 inline-block m-2"
             viewBox="0 0 20 20"
             fill="currentColor"
+            aria-hidden="true"
+            focusable="false"
           >
             <path
               fill-rule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 
+                 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
               clip-rule="evenodd"></path>
           </svg>
         </button>
       </div>
     </article>
+
     <article
       class="w-full flex items-center justify-between p-4 bg-azul-marinho-escuro"
     >
       <section class="flex flex-col gap-4 pr-4 text-branco-gelo">
-        <h3 class="font-spectral font-extrabold text-base md:text-lg">
+        <h3
+          id="faq-q-2"
+          class="font-spectral font-extrabold text-base md:text-lg"
+        >
           Quanto tempo demora um processo trabalhista?
         </h3>
         <p
+          id="faq-a-2"
+          role="region"
+          aria-labelledby="faq-q-2"
           data-index="2"
-          class="block paragraph-more hidden font-serif text-black font-medium bg-branco-gelo p-2 border-2 text-lg border-dourado-ocre w-[80%]"
+          class="paragraph-more hidden font-serif text-black font-medium bg-branco-gelo p-2 border-2 text-lg border-dourado-ocre w-[80%]"
         >
-          A duração varia conforme a complexidade do caso. <u
-            class="font-semibold"
+          A duração varia conforme a complexidade do caso.
+          <u class="font-semibold"
             >Nosso compromisso é buscar a solução mais rápida e vantajosa</u
           >, seja através de um acordo amigável ou da via judicial, mantendo
           você sempre informado sobre os prazos.
@@ -109,6 +138,9 @@
         <button
           data-index="2"
           type="button"
+          aria-controls="faq-a-2"
+          aria-expanded="false"
+          aria-label="Mostrar resposta: Quanto tempo demora um processo trabalhista?"
           class="display-more text-dourado-ocre bg-branco-gelo rounded-2xl hover:scale-105 border-2 border-dourado-ocre"
         >
           <svg
@@ -116,25 +148,35 @@
             class="h-5 w-5 inline-block m-2"
             viewBox="0 0 20 20"
             fill="currentColor"
+            aria-hidden="true"
+            focusable="false"
           >
             <path
               fill-rule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 
+                 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
               clip-rule="evenodd"></path>
           </svg>
         </button>
       </div>
     </article>
+
     <article
       class="w-full flex items-center justify-between p-4 bg-azul-marinho-escuro"
     >
       <section class="flex flex-col gap-4 pr-4 text-branco-gelo">
-        <h3 class="font-spectral font-extrabold text-base md:text-lg">
+        <h3
+          id="faq-q-3"
+          class="font-spectral font-extrabold text-base md:text-lg"
+        >
           Quais documentos eu preciso?
         </h3>
         <p
+          id="faq-a-3"
+          role="region"
+          aria-labelledby="faq-q-3"
           data-index="3"
-          class="block paragraph-more hidden font-serif text-black font-medium bg-branco-gelo p-2 border-2 text-lg border-dourado-ocre w-[80%]"
+          class="paragraph-more hidden font-serif text-black font-medium bg-branco-gelo p-2 border-2 text-lg border-dourado-ocre w-[80%]"
         >
           Inicialmente, RG, CPF, Carteira de Trabalho e documentos que comprovem
           a sua situação (contracheques, contrato, e-mails, etc.). Na nossa
@@ -147,6 +189,9 @@
         <button
           data-index="3"
           type="button"
+          aria-controls="faq-a-3"
+          aria-expanded="false"
+          aria-label="Mostrar resposta: Quais documentos eu preciso?"
           class="display-more text-dourado-ocre bg-branco-gelo rounded-2xl hover:scale-105 border-2 border-dourado-ocre"
         >
           <svg
@@ -154,10 +199,13 @@
             class="h-5 w-5 inline-block m-2"
             viewBox="0 0 20 20"
             fill="currentColor"
+            aria-hidden="true"
+            focusable="false"
           >
             <path
               fill-rule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 
+                 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
               clip-rule="evenodd"></path>
           </svg>
         </button>
@@ -171,11 +219,14 @@
     const prg = document.querySelector(
       `.paragraph-more[data-index="${index}"]`
     );
+    const btn = document.querySelector(`.display-more[data-index="${index}"]`);
+    const expanded = btn.getAttribute("aria-expanded") === "true";
+
     prg.classList.toggle("hidden");
+    btn.setAttribute("aria-expanded", String(!expanded));
   }
 
   const buttons = document.querySelectorAll(".display-more");
-
   buttons.forEach((btn) =>
     btn.addEventListener("click", () => {
       const idx = btn.dataset.index;

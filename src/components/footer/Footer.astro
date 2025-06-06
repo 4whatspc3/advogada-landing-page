@@ -5,27 +5,31 @@ import logo from "../../assets/hero-assets/VJM (1)-Photoroom.png";
 ---
 
 <footer
+  role="contentinfo"
+  aria-label="Rodapé com informações de contato e direitos autorais"
   class="min-h-[700px] bg-branco-gelo p-6 grid grid-rows-[350px_250px_60px] grid-cols-1 gap-10
          lg:grid-rows-[300px_100px] lg:grid-cols-[400px_400px] lg:place-content-center
          lg:min-h-0 lg:h-fit lg:p-8"
 >
   <section
+    aria-label="Informações da Advogada Vera Júlia Matos"
     class="text-center font-semibold font-spectral text-lg text-cinza-escuro pb-2 border-b-2 border-dourado-ocre w-full max-w-140 mx-auto
           lg:col-start-1 lg:col-end-2 lg:pb-0 lg:border-b-0 lg:border-r-2 lg:border-l-2"
   >
     <Image
       src={logo}
-      alt="logo"
+      alt="Logotipo da Vera Júlia Matos Advocacia"
       width={500}
       height={500}
       class="w-50 h-50 mx-auto"
     />
-    <h2>Vera Júlia Matos</h2>
+    <h2 class="mt-4">Vera Júlia Matos</h2>
     <h3>Advogada Trabalhista</h3>
     <h4>Defendendo quem constrói o país</h4>
   </section>
   <section class="flex flex-col gap-10 lg:border-r-2 border-dourado-ocre">
     <address
+      aria-label="Endereço do Escritório"
       class="not-italic font-serif text-lg text-center pb-2 border-b-2 border-dourado-ocre w-full max-w-140 mx-auto
            lg:row-start-1 lg:row-end-2 lg:col-start-2 lg:col-end-3 lg:pb-0 lg:border-b-0 lg:text-left lg:my-auto"
     >
@@ -35,37 +39,45 @@ import logo from "../../assets/hero-assets/VJM (1)-Photoroom.png";
     </address>
 
     <section
+      aria-label="Meios de Contato"
       class="font-serif text-lg text-center pb-2 border-b-2 border-dourado-ocre w-full max-w-140 mx-auto
              lg:pb-0 lg:border-b-0 lg:text-left"
     >
       <div class="flex gap-2 justify-center lg:justify-start">
         <Image
           src="/footer-icons/phone-outline (1).svg"
-          alt="icone de um teleone"
+          alt=""
           aria-hidden="true"
           class="w-6 md:w-8"
           width={8}
           height={8}
         />
-        <a href="tel:+5511933334444">(XX) 3333-4444</a>
+        <a href="tel:+5511933334444" aria-label="Ligar para (XX) 3333-4444"
+          >(XX) 3333-4444</a
+        >
       </div>
+
       <div class="flex gap-2 justify-center lg:justify-start">
         <Image
           src="/footer-icons/email-outline (1).svg"
-          alt="icone de um teleone"
+          alt=""
           aria-hidden="true"
           class="w-6 md:w-8"
           width={8}
           height={8}
         />
-        <a href="mailto:contato@docesabor.com.br"
-          >contato@matosadvocacia.com.br</a
+        <a
+          href="mailto:contato@matosadvocacia.com.br"
+          aria-label="Enviar email para contato@matosadvocacia.com.br"
         >
+          contato@matosadvocacia.com.br
+        </a>
       </div>
+
       <div class="flex gap-2 justify-center lg:justify-start">
         <Image
           src="/footer-icons/instagram(1).svg"
-          alt="icone do Instagram"
+          alt=""
           aria-hidden="true"
           class="w-6 md:w-8"
           width={8}
@@ -73,10 +85,12 @@ import logo from "../../assets/hero-assets/VJM (1)-Photoroom.png";
         />
         <a
           href="https://www.instagram.com/"
-          aria-label="Instagram"
+          aria-label="Abrir Instagram da Dra. Vera Júlia Matos"
           target="_blank"
-          rel="noopener noreferrer">@dra.vera.advogadatrabalhista</a
+          rel="noopener noreferrer"
         >
+          @dra.vera.advogadatrabalhista
+        </a>
       </div>
     </section>
   </section>
