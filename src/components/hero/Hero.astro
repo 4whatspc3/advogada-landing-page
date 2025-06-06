@@ -4,7 +4,8 @@ import logo from "../../assets/hero-assets/improvedlogo.png";
 import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
 ---
 
-<section
+<header
+  aria-label="Cabeçalho inicial com navegação e chamada principal"
   id="inicio"
   class="min-h-svh flex flex-col gap-8 bg-[url(/hero/fundo-hero.jpg)] bg-cover bg-center relative lg:gap-20 lg:bg-none"
 >
@@ -19,6 +20,7 @@ import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
       height="360"
       poster="public/hero/fallbackv2.jpg"
       class="w-full h-full object-cover"
+      aria-hidden="true"
     >
       <source src="/hero/compressedBG.webm" type="video/webm" />
       Seu navegador não suporta a reprodução de vídeo.
@@ -27,12 +29,14 @@ import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
   <Image
     id="fallbackImg"
     src={fallbackvideo}
-    alt="Fallback"
+    alt=""
+    aria-hidden="true"
     class="hidden absolute inset-0 w-full h-full object-cover"
   />
   <div class="absolute w-full h-full bg-black/50"></div>
 
   <nav
+    aria-label="Navegação principal"
     class="flex flex-col justify-between items-center relative z-10 lg:flex-row xl:w-[1280px] xl:mx-auto 2xl:w-[1400px]"
   >
     <div class="md:mr-auto md:ml-6">
@@ -149,7 +153,7 @@ import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
       >Agende uma Análise <br />Gratuita do seu Caso</a
     >
   </div>
-</section>
+</header>
 
 <style>
   summary::-webkit-details-marker {
