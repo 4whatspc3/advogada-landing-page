@@ -15,9 +15,6 @@ export async function GET(context) {
   // Usa o runtime se disponível; caso contrário, process.env (já configurado ou proveniente do Cloudflare)
   const env = (context.locals?.runtime?.env) || process.env;
 
-  console.log("[whatsapp] WP_NUMBER (process.env):", process.env.WP_NUMBER);
-  console.log("[whatsapp] Bindings disponíveis:", Object.keys(env));
-
   const wpNumber = env.WP_NUMBER;
   if (!wpNumber) {
     console.error("[whatsapp] WP_NUMBER não encontrado, keys:", Object.keys(env));
