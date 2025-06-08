@@ -1,4 +1,4 @@
-# Projeto Website - Advocacia Trabalhista
+# Projeto Website - Advogada Trabalhista
 
 Este é o repositório de um site institucional moderno, responsivo e otimizado, desenvolvido para uma advogada especialista em direito do trabalho. O projeto foi construído com foco em **performance, acessibilidade e uma excelente experiência de usuário**, demonstrando minhas habilidades em desenvolvimento web frontend.
 
