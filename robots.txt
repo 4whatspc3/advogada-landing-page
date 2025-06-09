@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /form-success
+Disallow: /api/whatsapp
