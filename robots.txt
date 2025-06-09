@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /form-success
 Disallow: /api/whatsapp
+
+Sitemap: https://advogada-landing-page.pages.dev/sitemap.xml
