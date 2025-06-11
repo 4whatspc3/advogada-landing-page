@@ -1,13 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../../assets/hero-assets/improvedlogo.png";
-import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
+import logo from "../../assets/hero-assets/improvedlogo.webp";
+import fallbackvideo from "../../../public/hero/fallbackv2.webp";
 ---
 
 <header
   aria-label="Cabeçalho inicial com navegação e chamada principal"
   id="inicio"
-  class="min-h-svh flex flex-col gap-8 bg-[url(/hero/fundo-hero.jpg)] bg-cover bg-center relative lg:gap-20 lg:bg-none"
+  class="min-h-svh flex flex-col gap-8 bg-[url(/hero/fundo-hero.webp)] bg-cover bg-center relative lg:gap-20 lg:bg-none"
 >
   <div id="video-container" class="hidden absolute inset-0 lg:block">
     <video
@@ -18,7 +18,7 @@ import fallbackvideo from "../../../public/hero/fallbackv2.jpg";
       id="meuVideo"
       width="640"
       height="360"
-      poster="public/hero/fallbackv2.jpg"
+      poster="public/hero/fallbackv2.webp"
       class="w-full h-full object-cover"
       aria-hidden="true"
     >
